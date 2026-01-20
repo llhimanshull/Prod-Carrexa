@@ -29,6 +29,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+      env:
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD}}
+        DB_USERNAME: ${{ secrets.DB_USERNAME}}
+        KEYCLOAK_ID: ${{KEYCLOAK_ID}}
+        KEYCLOAK_SECRET: ${{KEYCLOAK_SECRET}}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

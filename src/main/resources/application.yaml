@@ -11,7 +11,7 @@ spring:
   datasource:
     url: jdbc:postgresql://postgres-main:5432/CarrexaDB
     username: ${DB_USERNAME}
-    password: @{DB_PASSWORD}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
