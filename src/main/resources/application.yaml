@@ -1,3 +1,30 @@
 spring:
   application:
     name: carrexa
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/Carrexa
+          jwk-set-uri: http://localhost:8090/realms/Carrexa/protocol/openid-connect/certs
+
+  datasource:
+    url: jdbc:postgresql://postgres-main:5432/CarrexaDB
+    username: ${DB_USERNAME}
+    password: @{DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+
+keycloak:
+  server-url: http://localhost:8090
+  realm: Carrexa
+  client-id: ${KEYCLOAK_ID}
+  client-secret: ${KEYCLOAK_SECRET}
