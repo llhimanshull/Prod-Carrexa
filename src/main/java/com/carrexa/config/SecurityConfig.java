@@ -1,4 +1,4 @@
-package com.carrexa.carrexa.config;
+package com.carrexa.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

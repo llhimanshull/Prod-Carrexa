@@ -1,4 +1,4 @@
-package com.carrexa.carrexa;
+package com.carrexa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
