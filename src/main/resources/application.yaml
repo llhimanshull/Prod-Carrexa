@@ -22,6 +22,17 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+    listener:
+      simple:
+        concurrency: 3
+        max-concurrency: 10
+        missing-queues-fatal: false
+
 
 keycloak:
   server-url: http://localhost:8090
